@@ -1,0 +1,80 @@
+<pkmkdoc spec="1.12"><properties><title>EncFS Plugin for Macfusion 2</title><build>/Users/tobias/Developing/Macfusion2/Plugins/Encfs-google/trunk/EncFS Plugin.pkg</build><organization>com.t-haeberle</organization><userSees ui="easy"/><min-target os="3"/><domain system="true" user="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>A plugin to use Encrypted Filesystems with Macfusion 2.</description><contents><choice title="EncFS for Macfusion" id="choice14" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="com.t-haeberle.macfusion2.encfs.pkg"/></choice></contents><resources bg-scale="none" bg-align="bottomleft"><locale lang="en"><resource mod="true" type="background">/Users/tobias/Developing/Macfusion2/Plugins/EncFS/trunk/encfs.png</resource><resource mime-type="text/rtf" kind="embedded" type="license"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fnil\fcharset0 Verdana;}
+{\colortbl;\red255\green255\blue255;\red55\green55\blue55;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\deftab720
+\pard\pardeftab720\sl400\sa280\ql\qnatural
+
+\f0\fs24 \cf2 Copyright (c) 2009, Tobias Haeberle, Michael Gorbach\uc0\u8232 All rights reserved.\
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl400\sa20\ql\qnatural
+\ls1\ilvl0\cf2 {\listtext	\'95	}Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\
+{\listtext	\'95	}Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\
+\
+\pard\pardeftab720\sl400\sa280\ql\qnatural
+\cf2 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}]]></resource><resource mime-type="text/rtf" kind="embedded" type="readme"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\f0\b\fs38 \cf0 EncFS Plugin for Macfusion 2
+\b0\fs26 \
+\
+Copyright (c) 2009, Tobias Haeberle\
+All Rights Reserved.\
+Published under BSD License.\
+\
+http://thenakedman.wordpress.com/encfs/\
+\
+
+\b Features
+\b0 \
+\
+- Mount and unmount Encrypted Filesystems (EncFS)\
+- Create new Encrypted Filesystems\
+\
+For more information regarding EncFS visit:\
+http://www.arg0.net/encfs\
+\
+
+\b Requirements\
+\
+
+\b0 You will need to have EncFS 1.7.4 or newer installed on your system. EncFS must be installed in /usr/local/bin. The recommended way to install EncFS is using homebrew: http://mxcl.github.com/homebrew/\
+\
+$ brew install encfs\
+\
+
+\b Support
+\b0 \
+\
+If you need assistance you are welcome to contact me via E-Mail: tobias.haeberle@gmail.com}]]></resource><resource mime-type="text/rtf" kind="embedded" type="welcome"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\f0\fs26 \cf0 You will be guided through the steps necessary to install this software.\
+\
+\
+Note: This package requires MacFUSE, Macfusion 2 and EncFS installed before installation.\
+\
+
+\b MacFUSE
+\b0 \
+http://code.google.com/p/macfuse/\
+\
+
+\b Macfusion 2
+\b0 \
+http://macfusionapp.com\
+\
+
+\b EncFS 1.7.4 or newer
+\b0 \
+Install EncFS using homebrew!\
+http://mxcl.github.com/homebrew/\
+$ brew install encfs\
+\
+THIS SOFTWARE COMES WITHOUT WARRANTY.\
+USE AT OWN RISK!}]]></resource></locale></resources><requirements><requirement id="file" operator="eq" value="true"><file>/usr/local/bin/encfs</file><message-title>EncFS binary not found!</message-title><message>Please install EncFS before installation. Consult the ReadMe file for further instructions.</message></requirement></requirements><flags/><preinstall><action id="com.apple.packagemaker.actions.getapplication"><item1-title>org.mgorbach.macfusion2</item1-title></action><action id="com.apple.packagemaker.actions.quitapplication"/><action id="com.apple.packagemaker.actions.getapplication"><item2-title>macfusionAgent</item2-title></action><action id="com.apple.packagemaker.actions.killapplication"><value>3</value></action></preinstall><extra-files/><item type="file">01macfusion.xml</item><mod>properties.systemDomain</mod><mod>properties.title</mod><mod>description</mod><mod>postinstallActions.actions</mod><mod>properties.userDomain</mod><mod>properties.customizeOption</mod><mod>extraFiles</mod><mod>preinstallActions.actions</mod><mod>properties.anywhereDomain</mod></pkmkdoc>

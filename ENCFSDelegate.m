@@ -17,6 +17,7 @@
 #import <Security/Security.h>
 #import <MFCore/MFClientFSUI.h>
 #import "EncfsConfigurationController.h"
+#import "EncfsAdvancedConfigurationController.h"
 //#import "ENCFSServerFS.h"
 
 
@@ -69,6 +70,13 @@ NSString *kENCFSRawPathKey = @"rawPath";
 						   [parameters objectForKey: kENCFSRawPathKey]]];
 		
 	[arguments addObject: [parameters objectForKey: kMFFSMountPathParameter ]];
+    
+    NSString *extraCL = [parameters objectForKey:@"extraCL"];
+    if (extraCL && [extraCL length] > 0) {
+        for (id obj in [extraCL componentsSeparatedByString:@" "]) {
+            [arguments addObject:obj];
+        }
+    }
 	
 	[arguments addObject:[NSString stringWithFormat:@"--extpass=\"%@\"", [self askpassPath]]];
 	
@@ -243,13 +251,17 @@ NSString *kENCFSRawPathKey = @"rawPath";
 
 - (NSViewController*)advancedviewController
 {
-	return nil;
+    EncfsAdvancedConfigurationController *advancedViewController = [[EncfsAdvancedConfigurationController alloc]
+                                                                    initWithNibName:@"EncfsAdvancedConfigurationController"
+                                                                    bundle:[NSBundle bundleForClass:[self class]]];
+    [advancedViewController setTitle:@"EncFS Advanced"];
+    return advancedViewController;
 }
 
 - (NSArray*)viewControllerKeys
 {
 	return [NSArray arrayWithObjects: 
-			primaryViewControllerKey, kMFUIMacfusionAdvancedViewKey,
+			primaryViewControllerKey, advancedViewControllerKey, kMFUIMacfusionAdvancedViewKey,
 			nil];
 }
 
